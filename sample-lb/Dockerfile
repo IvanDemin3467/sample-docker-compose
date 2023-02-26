@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk add --update --no-progress --no-cache nginx
+RUN apk add --update-cache --no-progress --no-cache nginx
 #We well ensure that errors and access go to standard error/ouput
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
